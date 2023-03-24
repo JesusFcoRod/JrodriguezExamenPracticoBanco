@@ -20,6 +20,7 @@ namespace PL
                 Console.WriteLine("2.- UPDATE BANCO");
                 Console.WriteLine("3.- DELETE BANCO");
                 Console.WriteLine("4.- GET-ALL BANCO");
+                Console.WriteLine("4.- SUPER DIGITO");
                 Console.WriteLine("------------------------------------------------");
                 Console.WriteLine("SELECCIONE UNA OPCION: ");
                 op = int.Parse(Console.ReadLine());
@@ -154,8 +155,16 @@ namespace PL
 
                         break;
 
+                    case 5:
+                        Console.WriteLine("INGRESE UN NUMERO: ");
+                        string Numero = Console.ReadLine();
+
+                        int Resultado = BL.SuperDigito.CalcularSuperDigito(Numero); 
+                        Console.ReadKey();
+                        break;
+
                 }
-            } while (op <= 4 );
+            } while (op <= 4);
 
         }
     }
